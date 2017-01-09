@@ -15,4 +15,7 @@ A branch is a copy of a file or files. One would be used when creating and testi
 A commit is a kind of save point for a repository. A good commit message concisely describes changes that were made to files.
 
 * What is a merge conflict?
+
 A merge conflict occurs when multiple changes within the same lines of code occur, and it is not immediately determinable which changes take precedence.
+
+edit - I moved the 4th questions response to its own line.
