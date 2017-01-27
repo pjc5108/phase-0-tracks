@@ -1,0 +1,25 @@
+Elevator Robot
+
+-Await floor request from elevator rider.
+-Store request as x.
+-Hover finger above a button on the elevator control panel.
+-Move downward until the last row of buttons is reached.
+-Move leftward until the button for floor 1 is reached.
+-Until the button for floor x is reached:
+	-Move rightward until all buttons in that row have been hovered over.
+	-Move upward 1 row of buttons.
+	-Move leftward until all buttons in that row have been hovered over.
+-Press button for floor x.
+
+
+Cook Chicken Nuggets in the Microwave
+
+-Take chicken nuggets out of freezer.
+-Open bag of nuggets and put them on a plate.
+-Open microwave door.
+-Put chicken nuggets on the plate into the microwave.
+-Press "Add 30 Seconds" button.
+-Until nugs begin to sizzle:
+	-If timer is less than 5 seconds, press "Add 30 Seconds" button.
+-Take nugs out of microwave.
+-Enjoy with your favorite condiments.
