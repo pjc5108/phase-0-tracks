@@ -1,3 +1,49 @@
 body{
-	background-color: blue;
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #97FFF2;
+}
+
+* {
+	box-sizing: border-box;
+}
+h1 {
+	text-align: center;
+}
+
+article:first-of-type h2 {
+	margin-top: 0;
+}
+
+details > p {
+	background-color: #EEEBA4;
+}
+
+header {
+	
+	
+}
+
+.column-1 {
+	
+	display: inline-block;
+	width: 49.5%;
+	vertical-align: top;
+	border: solid 2px black;
+	padding: 1em;
+
+}
+
+.column-2 {
+	
+	display: inline-block;
+	width: 49.5%;
+	vertical-align: top;
+	border: solid 2px black;
+	padding: 1em;
+
+}
+
+footer {
+	
 }
