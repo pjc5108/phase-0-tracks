@@ -57,6 +57,17 @@ num_emp.times {
 	puts vamp_name
 	puts vamp
 
+	puts "List your allergies one at a time. Type 'done' when finished."
+	allergy = gets.chomp
+	while allergy != "done"
+		if allergy == "sunshine"
+			allergy = "done"
+			vamp_name = true
+		else 
+			allergy = gets.chomp
+		end
+	end
+
 	if vamp_name == true
 		puts "Definitely a vampire."
 	else
