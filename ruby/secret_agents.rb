@@ -12,12 +12,16 @@ def encrypt(sec_pass)
 	#sec_pass = "penguin"
 	encr_pass = ""
 	while index < sec_pass.length
-		encr_pass += sec_pass[index].next
+		if sec_pass[index] == "z"
+			encr_pass += "a"
+		else
+			encr_pass += sec_pass[index].next
+		end
 		index += 1
 	end
 	p encr_pass
 end
-
+encrypt("zebra")
 
 
 #2 Decryption
@@ -37,12 +41,15 @@ def decrypt(encr_pass)
 	alpha = "abcdefghijklmnopqrstuvwxyz"
 	decr_pass = ""
 	while index < encr_pass.length
-		
-	  i_pos = alpha.index(encr_pass[index])
-	  n_pos = i_pos - 1
-	  decr_pass += alpha[n_pos]
-	  index +=1 
-	end
+		i_pos = alpha.index(encr_pass[index])
+		if i_pos == 0
+			n_pos = 25
+		else
+			n_pos = i_pos - 1
+		end
+		  decr_pass += alpha[n_pos]
+		  index +=1 
+		end
 	p decr_pass
 end
-decrypt(encrypt("swordfish"))
+decrypt(encrypt("zebra"))
