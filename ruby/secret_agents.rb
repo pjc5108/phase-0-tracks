@@ -6,15 +6,19 @@
 	#Add it to the end of the encrypted password
 # Sum is the complete encrypted password
 
-
-index = 0
-sec_pass = "penguin"
-encr_pass = ""
-while index < sec_pass.length
-	encr_pass += sec_pass[index].next
-	index += 1
+def encrypt(sec_pass)
+	
+	index = 0
+	#sec_pass = "penguin"
+	encr_pass = ""
+	while index < sec_pass.length
+		encr_pass += sec_pass[index].next
+		index += 1
+	end
+	p encr_pass
 end
-print encr_pass
+
+
 
 #2 Decryption
 # Recieve encrypted password from first program
@@ -26,16 +30,19 @@ print encr_pass
 	#Add that result to decrypted password
 #Sum is the original password
 
+def decrypt(encr_pass)
 
-encr_pass = "qfohvjo"
-index = 0
-alpha = "abcdefghijklmnopqrstuvwxyz"
-decr_pass = ""
-while index < encr_pass.length
-	
-  i_pos = alpha.index(encr_pass[index])
-  n_pos = i_pos - 1
-  decr_pass += alpha[n_pos]
-  index +=1 
+	#encr_pass = "qfohvjo"
+	index = 0
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+	decr_pass = ""
+	while index < encr_pass.length
+		
+	  i_pos = alpha.index(encr_pass[index])
+	  n_pos = i_pos - 1
+	  decr_pass += alpha[n_pos]
+	  index +=1 
+	end
+	p decr_pass
 end
-p decr_pass
+decrypt(encrypt("swordfish"))
