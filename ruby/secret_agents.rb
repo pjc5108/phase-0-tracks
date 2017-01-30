@@ -21,7 +21,7 @@ def encrypt(sec_pass)
 	end
 	p encr_pass
 end
-encrypt("zebra")
+
 
 
 #2 Decryption
@@ -52,4 +52,17 @@ def decrypt(encr_pass)
 		end
 	p decr_pass
 end
-decrypt(encrypt("zebra"))
+
+puts "Would you like to encrypt or decrypt a password? (Type 1 for encryption, 2 for decryption.)"
+e_or_d = gets.to_i
+
+puts "What is your password?"
+user_pw = gets.chomp
+
+if e_or_d == 1
+	encrypt(user_pw)
+else
+	decrypt(user_pw)
+end
+	
+
