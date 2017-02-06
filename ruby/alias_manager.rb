@@ -38,7 +38,25 @@ def next_cons(name)
 end
 
 
-name = "Philip Cornman"
-name = next_cons("#{next_vowel("#{switch_name(name)}")}").split.map(&:capitalize).join(' ')
-puts name
+code_name_db = {
 
+}
+
+name = ""
+while name != "exit" do
+  
+  puts "Welcome to the secret codename generator!"
+  puts "What is your first and last name?"
+  name = gets.chomp
+  if name != "exit"
+  code_name = next_cons("#{next_vowel("#{switch_name(name)}")}").split.map(&:capitalize).join(' ')
+  
+  puts "Your codename is #{code_name}."
+  puts ""
+  code_name_db[ name.to_sym ] = code_name
+  else
+  end
+
+  
+end
+puts code_name_db
