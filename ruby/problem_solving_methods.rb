@@ -35,3 +35,26 @@ if fib_gen(100).last == 218922995834555169026
 else
 	puts "You still have some work to do!"
 end
+
+
+
+def bubble_sort(array)
+  n = array.length
+  loop do
+    swapped = false
+
+    (n-1).times do |i|
+      if array[i] > array[i+1]
+        array[i], array[i+1] = array[i+1], array[i]
+        swapped = true
+      end
+    end
+
+    break if not swapped
+  end
+
+  array
+end
+
+test = [ 1, 8, 9, 7, 6, 12, 2, 3, 4, 10]
+bubble_sort(test)
