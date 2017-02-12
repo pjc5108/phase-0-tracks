@@ -46,7 +46,7 @@
 # new_dog.handshake
 
 
-class Astronauts
+class Astronaut
 
 	def initialize
 		print "Astronauts initialized."
@@ -54,31 +54,43 @@ class Astronauts
 		print ""
 	end
 
-	def grav_boost(astronaut, planet_body)
+	def grav_boost(planet_body)
 
-		puts "#{astronaut} is using the #{planet_body} as a gravity boost."
+
+		puts "I'm using #{planet_body.sample} as a gravity boost."
+
 		
 	end
 
-	def docking(astronaut, station)
+	def docking(station)
 
-	puts "#{astronaut} is requesting docking privelidges with #{station}, over."
+	puts "Requesting docking privileges with the #{station.sample}, over."
 
 	end
 
 end
 
-astro_list = Array.new(5, "Astronaut ")
-index = 0
-number = 1
-until index == 5 do
-	astro_list[index] << "#{number}"
-	index += 1
-	number += 1
-	
+#astro_list = Array.new(50) { |i| "Astronaut " << (i + 1).to_s}
+
+astro_list = []
+
+50.times do
+	astro_list << Astronaut.new
 end
 
 p astro_list
+
+body_list = ["Mars", "the Moon", "Earth", "Titan"]
+
+station_list = [ "Nebechudnezzar", "Tempest", "Citadel"]
+
+astro_list.each { |e| e.grav_boost(body_list)}
+
+astro_list.each { |e| e.docking(station_list)}
+
+
+
+
 
 
 
