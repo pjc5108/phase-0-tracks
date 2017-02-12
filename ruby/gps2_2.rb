@@ -48,8 +48,6 @@ def create_list(groc_string)
 
 	groc_array.each { |e| groc_hash[e] = 1}
 
-	print groc_hash
-
 	return groc_hash
 end
 
@@ -61,8 +59,6 @@ def add_item(list, item_name, quantity = 1)
 	else
 		puts "That item is already on your list."
 	end
-
-	print list
 
 	return list
 end
@@ -76,8 +72,6 @@ def remove_item (list, item_name)
 		puts "That item is not on your list."
 	end
 
-	print list
-
 	return list
 end
 
@@ -90,7 +84,6 @@ def update_quantity(list, item_name, quantity)
 		puts "That item is not on your list."
 	end
 
-	print list
 
 	return list
 end
@@ -99,8 +92,17 @@ def print_list(list)
 
 	puts "Grocery List"
 	puts "------------"
-	list.each {|key, value| puts key + ": " + value }
+	list.each {|key, value| puts key + ": " + value.to_s }
 	puts ""
 end
 
 
+hash_list = create_list("lemonade tomatoes onions ice-cream")
+hash_list = update_quantity(hash_list, "lemonade", 2)
+hash_list = update_quantity(hash_list, "tomatoes", 3)
+hash_list = update_quantity(hash_list, "ice-cream", 4)
+p hash_list
+
+hash_list = remove_item(hash_list, "lemonade")
+hash_list = update_quantity(hash_list, "ice-cream", 1)
+print_list(hash_list)
