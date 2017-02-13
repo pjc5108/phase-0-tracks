@@ -1,0 +1,11 @@
+# One user enters a word
+# For each letter in the word, replace that letter with a '_' character.
+# For each letter in the word set a guess counter to that number(may be adjusted as needed)
+# A second user enters letters to attempt to guess the word (one letter at a time)
+# If a letter that the user enters, also exists in the word, the space where that letter exists is revealed.
+# For each guess that the second user enters
+	# Show the partially revealed string to the user
+	# Show an array of their guesses made so far.
+# If the user's guess exists in the guess array, do not adjust the guess counter.
+# If guess counter reaches 0 and '_' exists in the game word, user loses
+# If no more '_' exists in the game word, user wins.
