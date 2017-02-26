@@ -1,0 +1,23 @@
+1) Input: SELECT * FROM astronauts;
+	Output: 1|Philip Cornman|27|true|3
+			2|Vlad Akatosh|36|false|1
+			3|Neo Anderson|33|false|2
+			4|Harrison Ford|62|true|4
+
+2) Input: UPDATE astronauts SET age=40 WHERE name="Vlad Akatosh";
+	Output: none
+
+3) Input: SELECT * FROM astronauts, spacecraft WHERE astronauts.spacecraft_id = spacecraft.id;
+	Output: 1|Philip Cornman|27|true|3|3|The Tempest
+			2|Vlad Akatosh|40|false|1|1|International Space Station
+			3|Neo Anderson|33|false|2|2|Nebechudnezzar
+			4|Harrison Ford|62|true|4|4|Falcon 9
+
+4) Input:  SELECT astronauts.name, astronauts.age, spacecraft.name FROM astronauts JOIN spacecraft ON astronauts.spacecraft_id = spacecraft.id;
+	Output: Philip Cornman|27|The Tempest
+			Vlad Akatosh|40|International Space Station
+			Neo Anderson|33|Nebechudnezzar
+			Harrison Ford|62|Falcon 9
+
+5) Input: DELETE FROM astronauts WHERE name="Neo Anderson";
+	Ouput: none
