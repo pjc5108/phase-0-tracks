@@ -1,0 +1,17 @@
+2) Input: SELECT * FROM businesses, reviews, users WHERE users.id = reviews.user_id AND businesses.id = reviews.business_id;
+
+Ouput: 2|Amir's Towing|1|5|Great Food!|2|2|2|Angela|Jolie
+		3|The Beagle Nightclub|2|4|Decent service.|3|1|1|Bradford|Pitt
+		4|Lotus Yoga|3|1|Terrible yoga poses.|4|3|3|Steven|Wonder
+		1|Grundy Hollow Wedding Chapel|4|3|-----|1|4|4|Denzel|George
+
+3) Input: SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users JOIN businesses ON users.id = reviews.user_id AND businesses.id = reviews.business_id;
+
+Ouput: Angela|Jolie|Amir's Towing|5|Great Food!
+		Bradford|Pitt|The Beagle Nightclub|4|Decent service.
+		Steven|Wonder|Lotus Yoga|1|Terrible yoga poses.
+		Denzel|George|Grundy Hollow Wedding Chapel|3|-----
+
+4) Input: SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users JOIN businesses ON users.id = reviews.user_id AND businesses.id = reviews.business_id WHERE businesses.name = "Lotus Yoga";
+
+Ouput: Steven|Wonder|Lotus Yoga|1|Terrible yoga poses.
