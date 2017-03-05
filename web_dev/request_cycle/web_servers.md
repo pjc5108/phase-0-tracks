@@ -1,0 +1,5 @@
+ - Part of the philosophy of the Linux OS is that it assumes its users are computer literate when they use it. It assumes that its users know exactly what it is doing. It does not intend to stop its users from 'doing stupid things'.
+
+ - A VPS or virtual private server is a server that is a virtual server created from allocated or segmented memory of an actual phsyical server. It functionally behaves as a physical server. The advantages or using a VPS is that they are easily created and configured. They also can be removed and recreated just as easily so there is no concern for permanent damage.
+
+ - When logged into the root all actions and the actions of applications have complete access of the system. An example of why this is bad would be if there were a bug rolled out in an application, it could cause serious damage because it has complete access.
