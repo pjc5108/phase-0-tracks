@@ -1,0 +1,1 @@
+- Used the w3schools jquery tutorials to learn about jquery.
